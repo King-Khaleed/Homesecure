@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2D5A3D;
+  --color-primary-hover: #234730;
+  --color-accent: #F4A261;
+  --color-accent-hover: #e78e47;
+  --color-text-primary: #1A1A2E;
+  --color-text-secondary: #6B7280;
+  --color-surface: #F8F9FA;
+  --color-success: #10B981;
+  --color-danger: #F87171;
+  
+  --radius-lg: 8px;
+  --radius-md: 4px;
+}
+
+@layer base {
+  body {
+    @apply text-text-primary bg-white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-lg font-bold hover:bg-primary-hover transition-all transform hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 flex items-center justify-center gap-2 shadow-sm;
+  }
+  
+  .btn-accent {
+    @apply bg-accent text-white px-6 py-3 rounded-lg font-bold hover:bg-accent-hover transition-all transform hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 flex items-center justify-center gap-2 shadow-sm;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary px-6 py-3 rounded-lg font-bold hover:bg-primary/5 transition-all flex items-center justify-center gap-2;
+  }
+
+  .card {
+    @apply bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow p-6;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 bg-surface border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-text-primary placeholder:text-text-secondary/50;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 py-20;
+  }
+
+  .heading-1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-black text-text-primary leading-tight;
+  }
+
+  .heading-2 {
+    @apply text-3xl md:text-4xl font-bold text-text-primary mb-4;
+  }
+}
